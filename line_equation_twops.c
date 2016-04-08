@@ -17,13 +17,27 @@ int main(void)
         printf("Enter coordinates of second point.\n");
         scanf("%lf %lf",&x2,&y2);
 
-        lamda = (y2 - y1) / (x2 - x1) ;
-        beta = y1 - ( lamda*x1 ) ;
-
-        printf("Equation of the line connecting those two points is\n");
-        printf(" y = (%.1f)*x + %.1f.\n",lamda,beta);
+        printf("Equation of line connecting those two points is\n");
 
 
+        if(x2 == x1 && y2 != y1)
+
+                printf(" x = %.1f",x1);
+
+        else if(x2 != x1 && y2 == y1)
+
+                printf("y = %.1f",y1);
+
+        else if( x1 == x2 && y1 == y2 )
+                printf("Error.they are the same points.\n");
+        else
+        {
+                lamda = (y2 - y1) / (x2 - x1) ;
+                beta = y1 - ( lamda*x1 ) ;
+
+                printf(" y = (%.1f)*x + %.1f.\n",lamda,beta);
+
+        }
 
         return (0);
 }
