@@ -1,2 +1,2 @@
 # Algebra
-Implementations on C programming language of different features related to Algebra,by Mouzakitis Nikolaos.
+Implementations on C programming language of different features related to Algebra,
